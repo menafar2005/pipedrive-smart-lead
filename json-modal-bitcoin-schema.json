@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "header",
+    "price",
+    "change_24h",
+    "last_updated"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/definitions/numerical"
+    },
+    "header": {
+      "$ref": "#/definitions/header"
+    },
+    "price": {
+      "$ref": "#/definitions/text",
+      "label": "BTC/USD"
+    },
+    "change_24h": {
+      "$ref": "#/definitions/text",
+      "label": "24h change"
+    },
+    "last_updated": {
+      "$ref": "#/definitions/date-time",
+      "label": "Last updated"
+    }
+  }
+}
