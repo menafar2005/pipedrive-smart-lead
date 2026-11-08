@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "properties": {
+    "blocks": {
+      "type": "object",
+      "properties": {
+        "block_need_urgency": {
+          "$ref": "#/definitions/element-radio-group",
+          "options": {
+            "label": "How urgent is the customer's need?",
+            "isRequired": true,
+            "items": [
+              {
+                "label": "Cold - no clear timeline",
+                "value": "cold"
+              },
+              {
+                "label": "Warm - may buy this month",
+                "value": "warm"
+              },
+              {
+                "label": "Hot - wants to buy now",
+                "value": "hot"
+              }
+            ]
+          }
+        },
+        "block_budget": {
+          "$ref": "#/definitions/element-radio-group",
+          "options": {
+            "label": "Does the customer have budget?",
+            "isRequired": true,
+            "items": [
+              {
+                "label": "No / unknown",
+                "value": "no"
+              },
+              {
+                "label": "Partially clear",
+                "value": "partial"
+              },
+              {
+                "label": "Yes, confirmed",
+                "value": "yes"
+              }
+            ]
+          }
+        },
+        "block_decision_maker": {
+          "$ref": "#/definitions/element-radio-group",
+          "options": {
+            "label": "Are we talking to the decision maker?",
+            "isRequired": true,
+            "items": [
+              {
+                "label": "No",
+                "value": "no"
+              },
+              {
+                "label": "Influencer",
+                "value": "influencer"
+              },
+              {
+                "label": "Decision maker",
+                "value": "yes"
+              }
+            ]
+          }
+        },
+        "block_note": {
+          "$ref": "#/definitions/element-textarea",
+          "options": {
+            "label": "Qualification note",
+            "placeholder": "Optional note about this lead"
+          }
+        }
+      }
+    },
+    "actions": {
+      "type": "object",
+      "properties": {
+        "cancel_action": {
+          "$ref": "#/definitions/action-secondary",
+          "options": {
+            "label": "Cancel",
+            "handler": "cancel"
+          }
+        },
+        "submit_action": {
+          "$ref": "#/definitions/action-primary",
+          "options": {
+            "label": "Score and assign",
+            "handler": "request"
+          }
+        }
+      }
+    }
+  }
+}

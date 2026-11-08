@@ -1,0 +1,67 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "pipedrive-smart-assignment",
+	"main": "src/index.js",
+	"compatibility_date": "2026-07-09",
+	"vars": {
+		"PIPEDRIVE_CLIENT_ID": "86566d2a97defcd2",
+		"PIPEDRIVE_CLIENT_SECRET": "9b79d6cd74009b031cf6ede5fb56c1f02de9680b",
+		"PIPEDRIVE_JWT_SECRET": "smart-assignment-jwt-secret-demo-2026",
+		"PIPEDRIVE_WEBHOOK_AUTH_USER": "pipedrive-webhook",
+		"PIPEDRIVE_WEBHOOK_AUTH_PASSWORD": "very-long-random-secret",
+		"GEMINIAPIKEY": "AQ.Ab8RN6Lf6kbwI2P_G7DjpCQMGJlKt66gCcxX6my9dvuurSiWdg",
+		"RATE_LIMIT_WINDOW_SECONDS": 60,
+		"RATE_LIMIT_JSON_LEAD_SCORING": 60,
+		"RATE_LIMIT_BITCOIN_PANEL": 120,
+		"RATE_LIMIT_SAVE_CAPACITIES": 20,
+		"RATE_LIMIT_ASSIGN": 60,
+		"RATE_LIMIT_ASSIGNMENT_SUMMARY": 120,
+		"RATE_LIMIT_COMPANY_SALES_ANALYSIS": 10,
+	},
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "pipedrive-smart-assignment-db",
+			"database_id": "118ce7c2-348e-4897-93db-e8302a686f56",
+		}
+	]
+	/**
+	 * Smart Placement
+	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
+	 */
+	// "placement": {  "mode": "smart" }
+	/**
+	 * Bindings
+	 * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
+	 * databases, object storage, AI inference, real-time communication and more.
+	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
+	 */
+	/**
+	 * Environment Variables
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	 * Note: Use secrets to store sensitive data.
+	 * https://developers.cloudflare.com/workers/configuration/secrets/
+	 */
+	// "vars": {  "MY_VARIABLE": "production_value" }
+	/**
+	 * Static Assets
+	 * https://developers.cloudflare.com/workers/static-assets/binding/
+	 */
+	// "assets": {  "directory": "./public/",  "binding": "ASSETS" }
+	/**
+	 * Service Bindings (communicate between multiple Workers)
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
+	 */
+	// "services": [  {   "binding": "MY_SERVICE",   "service": "my-service"  } ]
+}

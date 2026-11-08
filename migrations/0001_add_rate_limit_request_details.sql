@@ -1,0 +1,12 @@
+ALTER TABLE rate_limits ADD COLUMN request_received_at DATETIME;
+ALTER TABLE rate_limits ADD COLUMN request TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_method TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_url TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_path TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_query TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_headers TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_body TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_ip TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_user_agent TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_content_type TEXT;
+ALTER TABLE rate_limits ADD COLUMN request_country TEXT;
