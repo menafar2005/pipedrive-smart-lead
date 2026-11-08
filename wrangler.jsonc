@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "pipedrive-smart-assignment",
+	"name": "pipedrive-smart-lead",
 	"main": "src/index.js",
 	"compatibility_date": "2026-07-09",
 	"vars": {
@@ -32,8 +32,8 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "pipedrive-smart-assignment-db",
-			"database_id": "118ce7c2-348e-4897-93db-e8302a686f56",
+			"database_name": "pipedrive-smart-lead-db",
+			"database_id": "7a582261-cbaa-452c-955b-50cc00fd24ea",
 		}
 	]
 	/**
