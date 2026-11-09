@@ -52,15 +52,15 @@ npx wrangler deploy
 
 ## Pipedrive URLs
 
-- OAuth callback: `https://app.loc.ir/oauth/callback`
-- OAuth start: `https://app.loc.ir/oauth/start`
-- App settings iframe: `https://app.loc.ir/settings`
-- Custom modal iframe: `https://app.loc.ir/custom-lead-scoring`
-- JSON modal endpoint: `https://app.loc.ir/json-lead-scoring`
-- Sidebar iframe: `https://app.loc.ir/sidebar`
-- JSON panel endpoint: `https://app.loc.ir/bitcoin-panel`
-- Organization link action: `https://app.loc.ir/company-sales-analysis`
-- SDK test lab iframe / custom modal: `https://app.loc.ir/sdk-lab`
+- OAuth callback: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/oauth/callback`
+- OAuth start: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/oauth/start`
+- App settings iframe: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/settings`
+- Custom modal iframe: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/custom-lead-scoring`
+- JSON modal endpoint: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/json-lead-scoring`
+- Sidebar iframe: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/sidebar`
+- JSON panel endpoint: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/bitcoin-panel`
+- Organization link action: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/company-sales-analysis`
+- SDK test lab iframe / custom modal: `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/sdk-lab`
 
 ## Required Pipedrive scopes
 
@@ -75,6 +75,6 @@ npx wrangler deploy
 
 After enabling security, direct browser access to iframe/API endpoints should return 401 unless Pipedrive sends a valid JWT token.
 
-Configure the company analysis extension as a Pipedrive **Link** in the **Organization details** location. Set its URL to `https://app.loc.ir/company-sales-analysis` and use the same JWT secret as `PIPEDRIVE_JWT_SECRET`.
+Configure the company analysis extension as a Pipedrive **Link** in the **Organization details** location. Set its URL to `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/company-sales-analysis` and use the same JWT secret as `PIPEDRIVE_JWT_SECRET`.
 
-Configure the SDK lab as a Pipedrive **Custom Modal** (or another Custom UI extension when testing surface-specific commands). Set its iframe URL to `https://app.loc.ir/sdk-lab` and use the same JWT secret as `PIPEDRIVE_JWT_SECRET`. Commands such as floating-window visibility and modal closing only work in their matching extension type.
+Configure the SDK lab as a Pipedrive **Custom Modal** (or another Custom UI extension when testing surface-specific commands). Set its iframe URL to `https://pipedrive-smart-lead.ehsan2005-ir.workers.dev/sdk-lab` and use the same JWT secret as `PIPEDRIVE_JWT_SECRET`. Commands such as floating-window visibility and modal closing only work in their matching extension type.
