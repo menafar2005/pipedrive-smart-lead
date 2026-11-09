@@ -1,6 +1,6 @@
 # Pipedrive Smart Assignment App
 
-Cloudflare Worker + D1 demo/private Pipedrive app.
+A Cloudflare Worker + D1 demo/private Pipedrive app.
 
 ## Features
 
